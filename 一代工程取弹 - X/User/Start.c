@@ -87,43 +87,43 @@ void start_task(void *pvParameters)
 	
 	//////////////////////////////	创建任务函数的代码	//////////////////////////////
 	
-//	xTaskCreate((TaskFunction_t )Gas_task,     	//任务函数
-//        (const char*    )"Gas_task",          //任务名称
-//        (uint16_t       )GAS_STK_SIZE,        //任务堆栈大小
-//        (void*          )NULL,                  //传递给任务函数的参数
-//        (UBaseType_t    )GAS_TASK_PRIO,       //任务优先级
-//        (TaskHandle_t*  )&Gas_Task_Handler);   //任务句柄  
-//	xTaskCreate((TaskFunction_t )Motor_task,     	//任务函数
-//        (const char*    )"Motor_task",          //任务名称
-//        (uint16_t       )MOTOR_STK_SIZE,        //任务堆栈大小
-//        (void*          )NULL,                  //传递给任务函数的参数
-//        (UBaseType_t    )MOTOR_TASK_PRIO,       //任务优先级
-//        (TaskHandle_t*  )&Motor_Task_Handler);   //任务句柄  
-//	xTaskCreate((TaskFunction_t )Chassis_task,     	//任务函数
-//        (const char*    )"Chassis_task",          //任务名称
-//        (uint16_t       )CHASSIS_STK_SIZE,        //任务堆栈大小
-//        (void*          )NULL,                  //传递给任务函数的参数
-//        (UBaseType_t    )CHASSIS_TASK_PRIO,       //任务优先级
-//        (TaskHandle_t*  )&Chassis_Task_Handler);   //任务句柄  
-	xTaskCreate((TaskFunction_t )Printf_task,     	//任务函数
-        (const char*    )"Printf_task",          //任务名称
-        (uint16_t       )PRINTF_STK_SIZE,        //任务堆栈大小
+	xTaskCreate((TaskFunction_t )Gas_task,     	//任务函数
+        (const char*    )"Gas_task",          //任务名称
+        (uint16_t       )GAS_STK_SIZE,        //任务堆栈大小
         (void*          )NULL,                  //传递给任务函数的参数
-        (UBaseType_t    )PRINTF_TASK_PRIO,       //任务优先级
-        (TaskHandle_t*  )&Printf_Task_Handler);   //任务句柄  
-	xTaskCreate((TaskFunction_t )VL53L0X_task,     
-		(const char*    )"VL53L0X_task",   				//TOF任务//
-		(uint16_t       )VL53L0X_STK_SIZE,
-		(void*          )NULL,
-		(UBaseType_t    )VL53L0X_TASK_PRIO,
-		(TaskHandle_t*  )&VL53L0X_Handler); 
-		
-	xTaskCreate((TaskFunction_t )vl53l0x_2_task,     
-		(const char*    )"vl53l0x_2_task",   			//tof测距函数				//测试成功
-		(uint16_t       )Vl53l0X_2_STK_SIZE,
-		(void*          )NULL,
-		(UBaseType_t    )Vl53l0X_2_TASK_PRIO,
-		(TaskHandle_t*  )&Vl53l0X_2_Handler); 
+        (UBaseType_t    )GAS_TASK_PRIO,       //任务优先级
+        (TaskHandle_t*  )&Gas_Task_Handler);   //任务句柄  
+	xTaskCreate((TaskFunction_t )Motor_task,     	//任务函数
+        (const char*    )"Motor_task",          //任务名称
+        (uint16_t       )MOTOR_STK_SIZE,        //任务堆栈大小
+        (void*          )NULL,                  //传递给任务函数的参数
+        (UBaseType_t    )MOTOR_TASK_PRIO,       //任务优先级
+        (TaskHandle_t*  )&Motor_Task_Handler);   //任务句柄  
+	xTaskCreate((TaskFunction_t )Chassis_task,     	//任务函数
+        (const char*    )"Chassis_task",          //任务名称
+        (uint16_t       )CHASSIS_STK_SIZE,        //任务堆栈大小
+        (void*          )NULL,                  //传递给任务函数的参数
+        (UBaseType_t    )CHASSIS_TASK_PRIO,       //任务优先级
+        (TaskHandle_t*  )&Chassis_Task_Handler);   //任务句柄  
+//	xTaskCreate((TaskFunction_t )Printf_task,     	//任务函数
+//        (const char*    )"Printf_task",          //任务名称
+//        (uint16_t       )PRINTF_STK_SIZE,        //任务堆栈大小
+//        (void*          )NULL,                  //传递给任务函数的参数
+//        (UBaseType_t    )PRINTF_TASK_PRIO,       //任务优先级
+//        (TaskHandle_t*  )&Printf_Task_Handler);   //任务句柄  
+//	xTaskCreate((TaskFunction_t )VL53L0X_task,     
+//		(const char*    )"VL53L0X_task",   				//TOF任务//
+//		(uint16_t       )VL53L0X_STK_SIZE,
+//		(void*          )NULL,
+//		(UBaseType_t    )VL53L0X_TASK_PRIO,
+//		(TaskHandle_t*  )&VL53L0X_Handler); 
+//		
+//	xTaskCreate((TaskFunction_t )vl53l0x_2_task,     
+//		(const char*    )"vl53l0x_2_task",   			//tof测距函数				//测试成功
+//		(uint16_t       )Vl53l0X_2_STK_SIZE,
+//		(void*          )NULL,
+//		(UBaseType_t    )Vl53l0X_2_TASK_PRIO,
+//		(TaskHandle_t*  )&Vl53l0X_2_Handler); 
 		
 //		xTaskCreate((TaskFunction_t )Prin/
 
