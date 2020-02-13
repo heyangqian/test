@@ -257,7 +257,7 @@ void Gas_task(void *pvParameter)    //气缸及电机标志位转化
 				}
 				else if(mox_flag == 2 && mov_flag == 2) //判断开始第三次平移
 				{
-					mov_flag = 3;
+					mov_flag = 0;
 //						res_flag = 1;
 				}
 			}
@@ -361,7 +361,7 @@ void Gas_task(void *pvParameter)    //气缸及电机标志位转化
 					}
 					else if(mox_flag == 2 && mov_flag == 2) //判断开始第三次平移
 					{
-						mov_flag = 3;
+						mov_flag = 0;
 						res_flag = 1;
 					}
 				}

@@ -84,7 +84,7 @@ void Motor_task(void *pvParameter)    //抓弹电机控制调试
 				{
 					mox_flag = 2;       //  x轴右平移完发送，执行爪子抓取
 				}
-				else if(mov_flag == 3)
+				else if(mov_flag == 0)
 				{
 					mox_flag = 0;       //x轴归位后发送，复位
 				}
@@ -231,7 +231,7 @@ void Motor_task(void *pvParameter)
 				{
 					mox_flag = 2;       //  x轴右平移完发送，执行爪子抓取
 				}
-				else if(mov_flag == 3)
+				else if(mov_flag == 0)
 				{
 					mox_flag = 0;       //x轴归位后发送，复位
 				}
@@ -378,7 +378,7 @@ void Motor_task(void *pvParameter)
 				{
 					mox_flag = 2;       //  x轴右平移完发送，执行爪子抓取
 				}
-				else if(mov_flag == 3)
+				else if(mov_flag == 0)
 				{
 					mox_flag = 0;       //x轴归位后发送，复位
 				}
@@ -617,7 +617,7 @@ void x_limit()
 	{
 		x_p_pid.Act_num = x_limit_right;
 	}
-	else if(x_p_pid.ActualNum <= x_limit_res && mov_flag == 3)
+	else if(x_p_pid.ActualNum <= x_limit_res && mov_flag == 0)
 	{
 		x_p_pid.Act_num = x_limit_res;
 	}
